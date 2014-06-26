@@ -1,0 +1,54 @@
+.nav {
+  margin-bottom: 0;
+  .list-unstyled();
+
+  > li {
+    position: relative;
+    display: block;
+
+    > a {
+      position: relative;
+      display: block;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.nav-header {
+  border-top: 1px solid lighten(@nav-page-color, 50%);
+  border-bottom: 1px solid lighten(@nav-page-color, 50%);
+  text-align: center;
+
+  > li {
+    display: inline-block;
+    vertical-align: top;
+
+    > a {
+      padding: 10px 15px;
+      font-size: 20px;
+      font-weight: 700;
+      color: @nav-page-color;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+      color: lighten(@nav-page-color, 50%)
+      }
+    }
+  }
+
+  > .active {
+
+    > a {
+
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-page-color-active;
+      }
+    }
+  }
+}
