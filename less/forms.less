@@ -1,0 +1,35 @@
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: @input-height; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: @input-padding @input-padding*2;
+  font-size: @font-size-base;
+  line-height: @input-line-height;
+  color: @input-color;
+  background-color: @input-bg;
+  border: 1px solid @input-border;
+
+  &:focus {
+    border-color: @input-border-focus;
+    outline: none;
+  }
+
+  // Placeholder
+  //.placeholder();
+
+  // Reset height for `textarea`s
+  textarea& {
+    height: 150px;
+    resize: none;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
